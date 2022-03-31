@@ -7,8 +7,8 @@ public class BinarySearch {
   }
 
   public int search(int[] haystack, int needle, int startPosition, int endPosition) {
-   int foundPosition = -1; // FIXME??
-    if (endPosition == startPosition) {
+   int foundPosition = -startPosition -1; // FIXME??
+    if (endPosition > startPosition) {
       int midpointPosition = (startPosition + endPosition) / 2; // Finding the midpoint, position is the outside of the box,
       // we need to see inside the box below
       int midpointValue = haystack[midpointPosition];
